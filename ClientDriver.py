@@ -3,7 +3,7 @@ import bencode
 
 version_number = "0001" #Current NfP Client version number. Updated 3 January, 2021
 
-class ClientBrain:
+class ClientDriver:
     @staticmethod
     def generate_id():
         """Generates a peer-to-peer identification number for BitTorrent tracking in the Azureus style.
@@ -36,4 +36,5 @@ class ClientBrain:
         return decoded_data
 
 
-ClientBrain.decode_torrent("ubuntu-20.10-desktop-amd64.iso.torrent")
+x = ClientDriver.decode_torrent("ubuntu-20.10-desktop-amd64.iso.torrent")
+print(x["announce"])
